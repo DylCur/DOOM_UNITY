@@ -680,6 +680,51 @@ MonoBehaviour:
   speed: 5
   avoidanceRadius: 2
   desiredDistance: 1
+--- !u!1 &352875978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352875979}
+  - component: {fileID: 352875980}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &352875979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352875978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1636885885}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &352875980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352875978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.57954454, z: 1}
+  m_Center: {x: 0, y: -0.85186553, z: 0}
 --- !u!1 &383654773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1622,7 @@ GameObject:
   - component: {fileID: 1071310728}
   - component: {fileID: 1071310727}
   - component: {fileID: 1071310731}
+  - component: {fileID: 1071310732}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Shotgun
@@ -1675,6 +1721,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 49.277878}
   m_Center: {x: 0, y: 0, z: -5.4348946}
+--- !u!114 &1071310732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071310726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03297321130f1ba4ea606e5cc4cd2841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  pistolTag: Pistol
+  shotgunTag: Shotgun
+  gunTags:
+  - 
+  - 
+  combatControlHolder: {fileID: 1636885881}
 --- !u!1 &1077361539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,8 +2123,6 @@ GameObject:
   - component: {fileID: 1636885887}
   - component: {fileID: 1636885886}
   - component: {fileID: 1636885888}
-  - component: {fileID: 1636885889}
-  - component: {fileID: 1636885890}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2080,6 +2143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
+  - {fileID: 352875979}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2128,6 +2192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb0a8fcd5f60dc4ba029cc734f29251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pistolStats:
+  - pistol
+  - 50
+  - 1
+  - 10
   shotgunStats:
   - Shotgun
   - 50
@@ -2151,36 +2220,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &1636885889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636885881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03297321130f1ba4ea606e5cc4cd2841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pistolTag: Pistol
-  shotgunTag: Shotgun
-  possibleTags:
-  - 
-  - 
---- !u!65 &1636885890
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636885881}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5078139, z: 1}
-  m_Center: {x: 0, y: -0.25390697, z: 0}
 --- !u!1 &1724486726
 GameObject:
   m_ObjectHideFlags: 0

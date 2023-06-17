@@ -8,7 +8,9 @@ public class combatController : MonoBehaviour
     [Header("Guns")]
     
     // Guns are formatted [name, damage, fire rate (Animation Time), Range]
-    public string[] shotgunStats = {"Shotgun", "50", "1", "10"};
+    public string[] pistolStats = {"pistol", "50", "1", "10"};
+    public string[] shotgunStats = {"shotgun", "50", "1", "10"};
+
 
     public string[] inventory = {"n", "n"};
     public int ammo;
