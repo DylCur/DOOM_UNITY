@@ -4,6 +4,13 @@ public class rotateToPlayer : MonoBehaviour
 {
     public Transform player;
 
+
+    void Awake()
+    {
+        GameObject p = GameObject.Find("Player");
+        player = p.transform;
+    }
+
     private void Update()
     {
         // Rotate towards the player's position

@@ -2,21 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shootingController : MonoBehaviour
+public class mapGenerator : MonoBehaviour
 {
-
-
-  
-
-
-    
-
+    // Room name, 
+    public string[] room1 = {"Room1"};
 
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -24,8 +19,4 @@ public class shootingController : MonoBehaviour
     {
         
     }
-
-   
-
-    
 }
