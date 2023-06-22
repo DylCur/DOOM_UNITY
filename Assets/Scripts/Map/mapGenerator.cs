@@ -111,17 +111,15 @@ public class mapGenerator : MonoBehaviour
                 }
 
                 else if(pixelColours[x] == roomColours[8]){ // Door
-                    Instantiate(rooms[3], new Vector3(x * roomSize, 0, y * roomSize), Quaternion.identity);
-                    Instantiate(rooms[2], new Vector3(x * roomSize, 14, y * roomSize), Quaternion.identity);
+                    Instantiate(rooms[9], new Vector3(x * roomSize, 6.5f, y * roomSize), Quaternion.identity);
 
-                    Instantiate(rooms[8], new Vector3(x * roomSize, 5, y * roomSize), Quaternion.identity);
+
+             
                 }
                 
                 else if(pixelColours[x] == roomColours[9]){ // Door Rotate
-                    Instantiate(rooms[3], new Vector3(x * roomSize, 0, y * roomSize), Quaternion.identity);
-                    Instantiate(rooms[2], new Vector3(x * roomSize, 14, y * roomSize), Quaternion.identity);
-
-                    Instantiate(rooms[8], new Vector3(x * roomSize, 5, y * roomSize), Quaternion.Euler(0, 90, 0));
+                    Instantiate(rooms[9], new Vector3(x * roomSize, 6.5f, y * roomSize), Quaternion.Euler(0, 90, 0));
+                   
                 }
 
                 // This is for if the colour is invalid : This should never happen in the game (Debug Only)!!!!!!
